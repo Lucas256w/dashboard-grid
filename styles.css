@@ -31,11 +31,15 @@ time, mark, audio, video {
 }
 
 /* Set sidebar and main column as a column each. */
+html {
+    height: 100%;
+}
+
 body {
     display: grid;
     grid-template-columns: 200px 1fr;
     font-family: 'Gabarito','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+    height: 100%;
 }
 
 
@@ -44,7 +48,7 @@ body {
 
 #sidebar {
     color: white;
-    height: 100vh;
+    height: 100%;
     background-color: #1792D4;
     font-weight: 600;
 }
@@ -101,6 +105,11 @@ body {
 
 
 /* CONTENT REGION */
+
+#content {
+    display: grid;
+    grid-template-rows: min-content auto;
+}
 
 header {
     padding: 16px 30px;
@@ -209,3 +218,68 @@ button:hover {
 
 
 /* INFORMATION(PROJECTS) SECTION */
+
+#information {
+    --card-gap: 16px;
+
+    background-color: #E2E8F0;
+    padding: 16px 30px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: var(--card-gap);
+}
+
+#projects {
+    display: grid;
+    grid-template-rows: 16px 1fr;
+}
+
+#cards {
+    padding-top: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: var(--card-gap);
+}
+
+.card-icon {
+    --card-icon-size: 20px;
+
+    height: var(--card-icon-size);
+    width: auto;
+    margin-left: 4px;
+  }
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    padding: 20px 16px;
+
+    display: grid;
+    grid-template-rows: 1fr var(--card-icon-size);
+}
+
+.card::before {
+    content: '';
+    width: 8px;
+    background: #F0B429; 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; 
+  }
+
+  .project-info {
+    color: #858585;
+    font-size: 12px;
+  }
+
+
+  .card-icons {
+    justify-self: end;
+    align-self: end;
+  }
