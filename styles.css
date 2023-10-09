@@ -21,6 +21,13 @@ time, mark, audio, video {
 
 /* GENERAL SETTINGS */
 
+:root {
+    --card-gap: 16px;
+    --title-card-space: 10px;
+    --card-icon-size: 20px;
+    --card-border-radius: 10px;
+}
+
 @font-face {
     font-family: 'Gabarito';
     src: url('./assets/fonts/gabarito-variablefont_wght-webfont.woff') format('woff'),
@@ -219,8 +226,9 @@ button:hover {
 
 /* INFORMATION(PROJECTS) SECTION */
 
+
+/* set grid for project and (trending + announcement) seperate columns */
 #information {
-    --card-gap: 16px;
 
     background-color: #E2E8F0;
     padding: 16px 30px;
@@ -229,13 +237,16 @@ button:hover {
     column-gap: var(--card-gap);
 }
 
+/* ensures cards take up all avaliable viewing space */
 #projects {
     display: grid;
     grid-template-rows: 16px 1fr;
 }
 
+/* set cards to a 3X2 grid*/
 #cards {
-    padding-top: 10px;
+
+    padding-top: var(--title-card-space);
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -244,16 +255,18 @@ button:hover {
 }
 
 .card-icon {
-    --card-icon-size: 20px;
 
     height: var(--card-icon-size);
     width: auto;
     margin-left: 4px;
   }
 
+  /* inner card settings */
 .card {
+
+
     background-color: white;
-    border-radius: 10px;
+    border-radius: var(--card-border-radius);
     position: relative;
     padding: 20px 16px;
 
@@ -283,3 +296,50 @@ button:hover {
     justify-self: end;
     align-self: end;
   }
+
+  /* ANNOUNCEMENT AND TRENDING SECTION */
+
+
+#others {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 20px;
+}
+
+#announcements,
+#trending {
+    display: grid;
+    grid-template-rows: 16px 1fr;
+}
+
+.others-card {
+    margin-top: var(--title-card-space);
+    background-color: white;
+    border-radius: var(--card-border-radius);
+    padding: 20px 16px;
+}
+
+.announcement-rows {
+    padding: 10px 0;
+}
+
+#trending-card {
+    display: grid;
+}
+
+#row-2 {
+    border-top: 2px solid #D2D2D2;
+    border-bottom: 2px solid #D2D2D2;
+}
+
+.trending-user {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    column-gap: 12px;
+    align-items: center;
+}
+
+.user-title {
+    color: #858585;
+    font-size: 12px;
+}
