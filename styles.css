@@ -19,6 +19,8 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+/* GENERAL SETTINGS */
+
 @font-face {
     font-family: 'Gabarito';
     src: url('./assets/fonts/gabarito-variablefont_wght-webfont.woff') format('woff'),
@@ -35,6 +37,10 @@ body {
     font-family: 'Gabarito','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
 }
+
+
+
+/* SIDEBAR REGION */
 
 #sidebar {
     color: white;
@@ -90,3 +96,116 @@ body {
     cursor: pointer;
     background-color: #175fd4;
 }
+
+
+
+
+/* CONTENT REGION */
+
+header {
+    padding: 16px 30px;
+}
+
+/* first row of header */
+#header-top {
+    display: grid;
+    align-items: center;
+    grid-template-columns: min-content 1fr;
+    margin-bottom: 20px;
+}
+
+/* center everthing and insert grid */
+#search-container,
+#header-top-right {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 8px;
+    align-items: center;
+}
+
+/* search bard customize */
+#search {
+    font-family: 'Gabarito', sans-serif;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #E2E8F0;
+    width: 400px;
+    
+    justify-self: start;
+}
+
+#profile-pic {
+    border-radius: 50%;
+    height: 34px;
+    width: auto;
+}
+
+.header-icon,
+label {
+    height: 1.25rem;
+    width: auto;
+}
+
+label:hover {
+    cursor:  pointer;
+}
+
+#header-top-right {
+    column-gap: 16px;
+    justify-self: end;
+}
+
+/* second row of header */
+
+#profile-pic-large {
+    border-radius: 50%;
+    height: 3rem;
+    width: auto;
+}
+
+/* set layout for left and right side */
+#header-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* seperate picture from name */
+#header-bottom-left {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    column-gap: 12px;
+    align-items: center;
+}
+
+/* individual columns for each button */
+#header-bottom-right {
+    display: grid;
+    grid-template-columns: repeat(3, 125px);
+    align-content: center;
+    justify-content: end;
+    justify-items: end;
+}
+
+/* button custimization */
+button {
+    font-family: 'Gabarito';
+    color: white;
+    background-color: #1792D4;
+    border-radius: 36px;
+    border: none;
+    width: 100px;
+    height: 36px;
+
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #175fd4;
+}
+
+
+
+
+/* INFORMATION(PROJECTS) SECTION */

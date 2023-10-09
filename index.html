@@ -56,21 +56,26 @@
     <div id="content">
         <header>
             <div id="header-top">
-                <input type="search">
-                <img src="" alt="" id="notification">
-                <img src="" alt="" id="profile-pic">
-                <h3 id="name">Some Person</h3>
+                <div id="search-container">
+                    <label for="search"><img src="./assets/icons/search.svg" alt="search" id="search-icon" class="header-icon"></label>
+                    <input type="search" id="search">
+                </div>
+                <div id="header-top-right">
+                    <img src="./assets/icons/bell.svg" alt="" id="notification" class="header-icon">
+                    <img src="./assets/icons/corgi.jpeg" alt="" id="profile-pic">
+                    <h3 style="font-weight: 800;">Some Person</h3>
+                </div>
             </div>
             <div id="header-bottom">
-                <div id="bottom-left-header">
-                    <img src="" alt="" id="profile-pic-large">
+                <div id="header-bottom-left">
+                    <img src="./assets/icons/corgi.jpeg" alt="" id="profile-pic-large">
                     <div id="welcome">
-                        <h5>Hi there</h4>
-                        <h2>Some Person (@SomPer)</h1>
+                        <p style="font-size: 12px;">Hi there,</p>
+                        <h2 style="font-weight: 800;">Some Person (@SomPer)</h1>
                     </div>
                 </div>
 
-                <div id="bottom-right-header">
+                <div id="header-bottom-right">
                     <button>New</button>
                     <button>Upload</button>
                     <button>Share</button>
