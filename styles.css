@@ -1,0 +1,92 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+@font-face {
+    font-family: 'Gabarito';
+    src: url('./assets/fonts/gabarito-variablefont_wght-webfont.woff') format('woff'),
+         url('./assets/fonts/gabarito-variablefont_wght-webfont.woff2') format('woff2');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Set sidebar and main column as a column each. */
+body {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    font-family: 'Gabarito','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+#sidebar {
+    color: white;
+    height: 100vh;
+    background-color: #1792D4;
+    font-weight: 600;
+}
+
+
+#dashboard-logo-container {
+    padding: 20px;
+    font-size: 24px;
+
+    /* Give logo and text each 1 column */
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    column-gap: 4px;
+
+    /* Align logo and text in center of y-axis */
+    align-items: center;
+}
+
+#logo {
+    height: 2rem;
+    width: auto;
+}
+
+.sidebar-icons {
+    height: 1rem;
+    width: auto;
+}
+
+#links-container {
+    margin-top: 50px;
+}
+
+
+.link {
+    padding-left: 20px;
+    margin-bottom: 16px;
+    height: 1.5rem;
+
+    /* align icon with icon text in center and place gaps between */
+    display: grid;
+    grid-template-columns: 1rem 1fr;
+    align-items: center;
+    column-gap: 20px;
+
+    transition: background-color 0.3s;
+}
+
+.link:hover {
+    cursor: pointer;
+    background-color: #175fd4;
+}
