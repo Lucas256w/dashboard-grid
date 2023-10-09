@@ -300,18 +300,22 @@ button:hover {
   /* ANNOUNCEMENT AND TRENDING SECTION */
 
 
+  /* set 2 cards to a row each */
 #others {
     display: grid;
     grid-template-rows: 1fr 1fr;
     row-gap: 20px;
 }
 
+
+/* seperate card title and car to distinct rows*/
 #announcements,
 #trending {
     display: grid;
     grid-template-rows: 16px 1fr;
 }
 
+/* set card settings */
 .others-card {
     margin-top: var(--title-card-space);
     background-color: white;
@@ -332,6 +336,7 @@ button:hover {
     border-bottom: 2px solid #D2D2D2;
 }
 
+/* align user profile with name and sub-text to center */
 .trending-user {
     display: grid;
     grid-template-columns: 34px 1fr;
