@@ -1,6 +1,6 @@
 # dashboard-grid
 
-<a href="https://lucas256w.github.io/dashboard-grid/" style="font-size: 72px !important;">Live Demo</a>
+ ## <a href="https://lucas256w.github.io/dashboard-grid/">Live Demo</a>
 <img src="./Screenshot 2023-10-09 at 6.29.46 PM.png">
 <h3>Admin Dashboard created using CSS Grid Layout.</h3>
 
